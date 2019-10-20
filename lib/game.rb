@@ -62,7 +62,7 @@ attr_accessor :board, :player_1, :player_2
     if !board.valid_move?(current_move) #is this where the issue is?
       turn
     else
-      @board.disply
+      @board.display
       @board.update(current_move, player)
     end
       @board.display
