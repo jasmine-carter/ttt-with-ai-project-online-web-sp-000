@@ -65,7 +65,7 @@ attr_accessor :board, :player_1, :player_2
       @board.disply
       @board.update(current_move, player)
     end
-      board.display
+      @board.display
   end
 
   def play
