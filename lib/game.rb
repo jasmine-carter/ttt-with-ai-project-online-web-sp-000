@@ -60,11 +60,15 @@ attr_accessor :board, :player_1, :player_2
     player = current_player
     current_move = player.move(player)
     if !board.valid_move?(current_move)
-      current_move =player.move(player)
+      turn
     else
-      board.update(current_move, current_player)
+      puts "Turn: #{@board.turn_count+1}\n"
+      @board.display
+      @board.update(current_move, player)
+      puts "#{player.token} moved #{current_move}"
+      @board.display
+      puts "\n\n"
     end
-      board.display
   end
 
   def play
