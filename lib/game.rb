@@ -60,9 +60,10 @@ attr_accessor :board, :player_1, :player_2
     player = current_player
     current_move = player.move(@board)
     if !board.valid_move?(current_move) #is this where the issue is?
-      current_move =player.move(player.token)
+      turn
     else
-      board.update(current_move, player)
+      @board.disply
+      @board.update(current_move, player)
     end
       board.display
   end
